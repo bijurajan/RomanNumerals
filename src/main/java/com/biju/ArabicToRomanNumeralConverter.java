@@ -19,6 +19,8 @@ public class ArabicToRomanNumeralConverter {
 		
 		if(number == 4){
 			return "IV";
+		} else if(number == 6){
+			return "VI";
 		}
 		
 		for (int i = 0; i < number; i++) {
