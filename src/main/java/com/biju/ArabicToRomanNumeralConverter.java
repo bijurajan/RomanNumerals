@@ -17,6 +17,10 @@ public class ArabicToRomanNumeralConverter {
 			return cutOffsMap.get(number);
 		}
 		
+		if(number == 4){
+			return "IV";
+		}
+		
 		for (int i = 0; i < number; i++) {
 			result.append("I");
 		}
