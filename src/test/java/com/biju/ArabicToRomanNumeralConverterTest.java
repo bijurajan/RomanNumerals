@@ -38,6 +38,17 @@ public class ArabicToRomanNumeralConverterTest {
 	public void shouldConvert6ToVI() throws Exception {
 		assertThat(convertArabicToRomanOf(6), is("VI"));
 	}
+	
+	@Test
+	public void shouldConvert7ToVII() throws Exception {
+		assertThat(convertArabicToRomanOf(7), is("VII"));
+	}
+	
+	@Test
+	public void shouldConvert8ToVIII() throws Exception {
+		assertThat(convertArabicToRomanOf(8), is("VIII"));
+	}
+
 
 	private String convertArabicToRomanOf(int arabicNumeral) {
 		return this.converter.convert(arabicNumeral);

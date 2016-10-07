@@ -21,6 +21,10 @@ public class ArabicToRomanNumeralConverter {
 			return "IV";
 		} else if(number == 6){
 			return "VI";
+		} else if(number == 7){
+			return "VII";
+		} else if(number == 8){
+			return "VIII";
 		}
 		
 		for (int i = 0; i < number; i++) {
