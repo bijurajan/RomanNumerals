@@ -17,17 +17,16 @@ public class ArabicToRomanNumeralConverter {
 			return cutOffsMap.get(number);
 		}
 		
-		if(number == 4){
-			return "IV";
-		} else if(number == 6){
-			return "VI";
-		} else if(number == 7){
-			return "VII";
-		} else if(number == 8){
-			return "VIII";
+		int difference = number;
+		if(number > 5){
+			result.append("V");
+			difference = number - 5;
+		} else if(difference == 4){
+			result.append("IV");
+			difference = difference - 4;
 		}
 		
-		for (int i = 0; i < number; i++) {
+		for (int i = 0; i < difference; i++) {
 			result.append("I");
 		}
 		return result.toString();
