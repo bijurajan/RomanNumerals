@@ -28,6 +28,11 @@ public class ArabicToRomanNumeralConverterTest {
 	public void shouldConvert5ToV() throws Exception {
 		assertThat(convertArabicToRomanOf(5), is("V"));
 	}
+	
+	@Test
+	public void shouldConvert4ToIV() throws Exception {
+		assertThat(convertArabicToRomanOf(4), is("IV"));
+	}
 
 	private String convertArabicToRomanOf(int arabicNumeral) {
 		return this.converter.convert(arabicNumeral);
