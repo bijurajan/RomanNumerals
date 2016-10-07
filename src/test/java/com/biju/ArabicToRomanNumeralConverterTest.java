@@ -23,6 +23,11 @@ public class ArabicToRomanNumeralConverterTest {
 	public void shouldConvert3ToIII() throws Exception {
 		assertThat(convertArabicToRomanOf(3), is("III"));
 	}
+	
+	@Test
+	public void shouldConvert5ToV() throws Exception {
+		assertThat(convertArabicToRomanOf(5), is("V"));
+	}
 
 	private String convertArabicToRomanOf(int arabicNumeral) {
 		return this.converter.convert(arabicNumeral);
