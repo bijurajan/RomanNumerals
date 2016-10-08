@@ -98,6 +98,16 @@ public class ArabicToRomanNumeralConverterTest {
 	public void shouldConvert99ToXCIX() throws Exception {
 		assertThat(convertArabicToRomanOf(99), is("XCIX"));
 	}
+	
+	@Test
+	public void shouldConvert1066ToMLXVI() throws Exception {
+		assertThat(convertArabicToRomanOf(1066), is("MLXVI"));
+	}
+	
+	@Test
+	public void shouldConvert1989ToMCMLXXXIX() throws Exception {
+		assertThat(convertArabicToRomanOf(1989), is("MCMLXXXIX"));
+	}
 
 	private String convertArabicToRomanOf(int arabicNumeral) {
 		return this.converter.convert(arabicNumeral);
