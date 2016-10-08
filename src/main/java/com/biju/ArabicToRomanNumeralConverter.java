@@ -8,7 +8,8 @@ public class ArabicToRomanNumeralConverter {
 	
 	Map<Integer, String> cutOffsMap = ImmutableMap.of(
 			1, "I",
-			5, "V"
+			5, "V",
+			10, "X"
 			);
 
 	public String convert(int number) {
