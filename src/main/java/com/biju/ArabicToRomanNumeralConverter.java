@@ -1,29 +1,31 @@
 package com.biju;
 
 public class ArabicToRomanNumeralConverter {
-	
+
+	private static final String I = "I";
+	private static final int[] CUTOFF_NUMBERS = { 5, 10 };
+	private static final String[] CUTOFF_VALUES = { "V", "X" };
+
 	public String convert(int number) {
 		StringBuilder result = new StringBuilder();
 
 		int difference = number;
-		if(number >= 10){
-			result.append("X");
-			difference = difference - 10;
+
+		for (int counter = CUTOFF_NUMBERS.length - 1; counter >= 0; counter--) {
+			int cutOffNumber = CUTOFF_NUMBERS[counter];
+			String cutOffValue = CUTOFF_VALUES[counter];
+			if (difference >= cutOffNumber) {
+				result.append(cutOffValue);
+				difference = difference - cutOffNumber;
+			}
+			if (difference == cutOffNumber - 1) {
+				result.append(I + cutOffValue);
+				difference = difference - cutOffNumber - 1;
+			}
 		}
-		if(difference == 9){
-			result.append("IX");
-			difference = difference - 9;
-		}
-		if(difference >= 5){
-			result.append("V");
-			difference = difference - 5;
-		} else if(difference == 4){
-			result.append("IV");
-			difference = difference - 4;
-		}
-		
+
 		for (int i = 0; i < difference; i++) {
-			result.append("I");
+			result.append(I);
 		}
 		return result.toString();
 	}
