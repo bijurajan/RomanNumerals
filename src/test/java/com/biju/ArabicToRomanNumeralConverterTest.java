@@ -48,6 +48,11 @@ public class ArabicToRomanNumeralConverterTest {
 	public void shouldConvert8ToVIII() throws Exception {
 		assertThat(convertArabicToRomanOf(8), is("VIII"));
 	}
+	
+	@Test
+	public void shouldConvert9ToIX() throws Exception {
+		assertThat(convertArabicToRomanOf(9), is("IX"));
+	}
 
 
 	private String convertArabicToRomanOf(int arabicNumeral) {

@@ -18,6 +18,9 @@ public class ArabicToRomanNumeralConverter {
 		}
 		
 		int difference = number;
+		if(number == 9){
+			return "IX";
+		}
 		if(number > 5){
 			result.append("V");
 			difference = number - 5;
