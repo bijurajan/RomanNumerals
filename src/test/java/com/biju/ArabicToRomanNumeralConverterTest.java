@@ -85,8 +85,18 @@ public class ArabicToRomanNumeralConverterTest {
 	}
 	
 	@Test
-	public void shouldConvert100ToXL() throws Exception {
+	public void shouldConvert100ToC() throws Exception {
 		assertThat(convertArabicToRomanOf(100), is("C"));
+	}
+	
+	@Test
+	public void shouldConvert90ToXC() throws Exception {
+		assertThat(convertArabicToRomanOf(90), is("XC"));
+	}
+	
+	@Test
+	public void shouldConvert99ToXCIX() throws Exception {
+		assertThat(convertArabicToRomanOf(99), is("XCIX"));
 	}
 
 	private String convertArabicToRomanOf(int arabicNumeral) {
