@@ -63,6 +63,21 @@ public class ArabicToRomanNumeralConverterTest {
 	public void shouldConvert11ToXI() throws Exception {
 		assertThat(convertArabicToRomanOf(11), is("XI"));
 	}
+	
+	@Test
+	public void shouldConvert15ToXV() throws Exception {
+		assertThat(convertArabicToRomanOf(15), is("XV"));
+	}
+	
+	@Test
+	public void shouldConvert20ToXX() throws Exception {
+		assertThat(convertArabicToRomanOf(15), is("XV"));
+	}
+	
+	@Test
+	public void shouldConvert50ToL() throws Exception {
+		assertThat(convertArabicToRomanOf(50), is("L"));
+	}
 
 	private String convertArabicToRomanOf(int arabicNumeral) {
 		return this.converter.convert(arabicNumeral);

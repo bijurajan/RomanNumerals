@@ -3,8 +3,8 @@ package com.biju;
 public class ArabicToRomanNumeralConverter {
 
 	private static final String I = "I";
-	private static final int[] CUTOFF_NUMBERS = { 5, 10 };
-	private static final String[] CUTOFF_VALUES = { "V", "X" };
+	private static final int[] CUTOFF_NUMBERS = { 5, 10, 50 };
+	private static final String[] CUTOFF_VALUES = { "V", "X", "L" };
 
 	public String convert(int number) {
 		StringBuilder result = new StringBuilder();
