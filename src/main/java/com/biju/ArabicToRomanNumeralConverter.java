@@ -19,12 +19,17 @@ public class ArabicToRomanNumeralConverter {
 		}
 		
 		int difference = number;
-		if(number == 9){
-			return "IX";
+		if(number > 10){
+			result.append("X");
+			difference = difference - 10;
 		}
-		if(number > 5){
+		if(difference == 9){
+			result.append("IX");
+			difference = difference - 9;
+		}
+		if(difference > 5){
 			result.append("V");
-			difference = number - 5;
+			difference = difference - 5;
 		} else if(difference == 4){
 			result.append("IV");
 			difference = difference - 4;
