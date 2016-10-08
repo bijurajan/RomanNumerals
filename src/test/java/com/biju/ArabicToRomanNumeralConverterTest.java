@@ -83,6 +83,11 @@ public class ArabicToRomanNumeralConverterTest {
 	public void shouldConvert40ToXL() throws Exception {
 		assertThat(convertArabicToRomanOf(40), is("XL"));
 	}
+	
+	@Test
+	public void shouldConvert100ToXL() throws Exception {
+		assertThat(convertArabicToRomanOf(100), is("C"));
+	}
 
 	private String convertArabicToRomanOf(int arabicNumeral) {
 		return this.converter.convert(arabicNumeral);
