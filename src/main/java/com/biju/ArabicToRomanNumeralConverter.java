@@ -14,21 +14,13 @@ public class ArabicToRomanNumeralConverter {
 			int cutOffNumber = CUTOFF_NUMBERS[i];
 			String cutOffValue = CUTOFF_VALUES[i];
 			int count=0;
-			while(difference > 0 && count < 3){
-				difference = calculateDifference(result, difference, cutOffNumber, cutOffValue);
+			while(count < 3 && difference >= cutOffNumber){
+				result.append(cutOffValue);
+				difference = difference - cutOffNumber;
 				count++;
 			}
 		}
 
 		return result.toString();
 	}
-
-	private int calculateDifference(StringBuilder result, int difference, int cutOffNumber, String cutOffValue) {
-		if (difference >= cutOffNumber) {
-			result.append(cutOffValue);
-			difference = difference - cutOffNumber;
-		}
-		return difference;
-	}
-
 }
