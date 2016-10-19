@@ -13,11 +13,10 @@ public class ArabicToRomanNumeralConverter {
 		for (int i = CUTOFF_NUMBERS.length - 1; i >= 0; i--) {
 			int cutOffNumber = CUTOFF_NUMBERS[i];
 			String cutOffValue = CUTOFF_VALUES[i];
-			int count=0;
-			while(count < 3 && difference >= cutOffNumber){
+			
+			for(int j=0; j< 3 && difference >= cutOffNumber; j++){
 				result.append(cutOffValue);
 				difference = difference - cutOffNumber;
-				count++;
 			}
 		}
 
